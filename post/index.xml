@@ -14,16 +14,14 @@
       
       <guid>http://luguopiqiu.top/post/gitnote/</guid>
       <description>Git是一个分布式的版本管理器（是一个软件） Git跟踪的是修改，而不是文件
-Git名词  仓库   就是一个包含.git文件夹的文件夹
-  工作目录   打开文件管理器，进入/home/user目录，那么此时user，就是你的工作目录；如果你进入了/home/user/document目录，此时你的工作目录则变更为document。总的来说，就是你在哪个目录，哪个目录就是你的工作目录。
- Git分为三棵树：
- 工作目录 暂存区 HEAD  Git命令  init   在一个空文件夹下执行git init，会将此文件夹初始化为git仓库
-如果要指定文件夹初始化为仓库，则执行git init 。
-  clone   克隆一个仓库到工作目录下，git clone &amp;lt;地址&amp;gt;
-  add   将工作目录中的test.txt文件添加到暂存区，git add test.txt
-  commit   将暂存区内test.txt文件提交到HEAD中（此时暂存区内只有test.txt一个文件），git commit -m &amp;ldquo;对此次提交的注释&amp;rdquo;
-  -m 选项是对后面的注释添加的参数。 如果不写 -m，只写git commit，则会在此句命令后，系统会提示让你填写注释。
-  如果想将暂存区内所有的文件都提交到HEAD中，git commit -a -m &amp;ldquo;对此次提交的注释&amp;rdquo;</description>
+Git名词  仓库 就是一个包含.git文件夹的文件夹 工作目录 打开文件管理器，进入/home/user目录，那么此时user，就是你的工作目录；如果你进入了/home/user/document目录，此时你的工作目录则变更为document。总的来说，就是你在哪个目录，哪个目录就是你的工作目录。  Git分为三棵树：
+ 工作目录 暂存区 HEAD  Git命令  init  在一个空文件夹下执行git init，会将此文件夹初始化为git仓库 如果要指定文件夹初始化为仓库，则执行git init 。
+ clone  克隆一个仓库到工作目录下，git clone &amp;lt;地址&amp;gt;
+ add  将工作目录中的test.txt文件添加到暂存区，git add test.txt
+ commit  将暂存区内test.txt文件提交到HEAD中（此时暂存区内只有test.txt一个文件），git commit -m &amp;ldquo;对此次提交的注释&amp;rdquo;
+-m 选项是对后面的注释添加的参数。 如果不写 -m，只写git commit，则会在此句命令后，系统会提示让你填写注释。 如果想将暂存区内所有的文件都提交到HEAD中，git commit -a -m &amp;ldquo;对此次提交的注释&amp;rdquo; -a选项只会提交文件的修改，不会添加新的文件到HEAD中
+ status  查看暂存区的状态，命令git status
+ diff  查看指定文件在“工作区”与“版本库”中的不同之处，git diff  log  显示从最近到最远的提交日志，git log。 添加 &amp;ndash;pretty=oneline 参数：只显示“快照哈希值”与“提交注释”，git log &amp;ndash;pretty=oneline。</description>
     </item>
     
   </channel>

@@ -81,17 +81,11 @@
 Git跟踪的是修改，而不是文件</p>
 <h1 id="git名词">Git名词</h1>
 <ul>
-<li>仓库</li>
+<li>仓库
+就是一个包含.git文件夹的文件夹</li>
+<li>工作目录
+打开文件管理器，进入/home/user目录，那么此时user，就是你的工作目录；如果你进入了/home/user/document目录，此时你的工作目录则变更为document。总的来说，就是你在哪个目录，哪个目录就是你的工作目录。</li>
 </ul>
-<blockquote>
-<p>就是一个包含.git文件夹的文件夹</p>
-</blockquote>
-<ul>
-<li>工作目录</li>
-</ul>
-<blockquote>
-<p>打开文件管理器，进入/home/user目录，那么此时user，就是你的工作目录；如果你进入了/home/user/document目录，此时你的工作目录则变更为document。总的来说，就是你在哪个目录，哪个目录就是你的工作目录。</p>
-</blockquote>
 <p>Git分为三棵树：</p>
 <ol>
 <li>工作目录</li>
@@ -102,96 +96,60 @@ Git跟踪的是修改，而不是文件</p>
 <ul>
 <li>init</li>
 </ul>
-<blockquote>
-<p>在一个空文件夹下执行git init，会将此文件夹初始化为git仓库</p>
-<p>如果要指定文件夹初始化为仓库，则执行git init <!-- raw HTML omitted -->。</p>
-</blockquote>
+<p>在一个空文件夹下执行git init，会将此文件夹初始化为git仓库
+如果要指定文件夹初始化为仓库，则执行git init <!-- raw HTML omitted -->。</p>
 <ul>
 <li>clone</li>
 </ul>
-<blockquote>
 <p>克隆一个仓库到工作目录下，git clone &lt;地址&gt;</p>
-</blockquote>
 <ul>
 <li>add</li>
 </ul>
-<blockquote>
 <p>将工作目录中的test.txt文件添加到暂存区，git add test.txt</p>
-</blockquote>
 <ul>
 <li>commit</li>
 </ul>
-<blockquote>
 <p>将暂存区内test.txt文件提交到HEAD中（此时暂存区内只有test.txt一个文件），git commit -m &ldquo;对此次提交的注释&rdquo;</p>
-</blockquote>
-<blockquote>
 <p>-m 选项是对后面的注释添加的参数。
-如果不写 -m，只写git commit，则会在此句命令后，系统会提示让你填写注释。</p>
-</blockquote>
-<blockquote>
-<p>如果想将暂存区内所有的文件都提交到HEAD中，git commit -a -m &ldquo;对此次提交的注释&rdquo;</p>
-</blockquote>
-<blockquote>
-<p>-a选项只会提交文件的修改，不会添加新的文件到HEAD中</p>
-</blockquote>
+如果不写 -m，只写git commit，则会在此句命令后，系统会提示让你填写注释。
+如果想将暂存区内所有的文件都提交到HEAD中，git commit -a -m &ldquo;对此次提交的注释&rdquo;
+-a选项只会提交文件的修改，不会添加新的文件到HEAD中</p>
 <ul>
 <li>status</li>
 </ul>
-<blockquote>
 <p>查看暂存区的状态，命令git status</p>
-</blockquote>
 <ul>
 <li>diff</li>
 </ul>
-<blockquote>
 <p>查看指定文件在“工作区”与“版本库”中的不同之处，git diff <!-- raw HTML omitted --></p>
-</blockquote>
 <ul>
 <li>log</li>
 </ul>
-<blockquote>
 <p>显示从最近到最远的提交日志，git log。
 添加 &ndash;pretty=oneline 参数：只显示“快照哈希值”与“提交注释”，git log &ndash;pretty=oneline。</p>
-</blockquote>
 <ul>
 <li>reset</li>
 </ul>
-<blockquote>
 <p>回退到以前的版本，git reset &ndash;hard &lt;快照哈希值&gt;
 撤销添加到暂存区的动作，git reset HEAD <!-- raw HTML omitted --></p>
-</blockquote>
 <ul>
 <li>reflog</li>
 </ul>
-<blockquote>
 <p>查看你的每一次命令，git reflog。</p>
-</blockquote>
 <ul>
 <li>checkout</li>
 </ul>
-<blockquote>
 <p>用版本库中的文件替换工作区中的文件
 让文件回到最近一次操作的状态(commit或add)，git checkout &ndash; <!-- raw HTML omitted --></p>
-</blockquote>
-<blockquote>
 <p>创建分支并切换到新分支上，git checkout -b <!-- raw HTML omitted -->。(git switch -c <!-- raw HTML omitted -->。这是最新版本添加的命令)</p>
-</blockquote>
-<blockquote>
 <p>切换分支，git checkout <!-- raw HTML omitted -->。(git switch <!-- raw HTML omitted -->。这是最新版本添加的命令)</p>
-</blockquote>
-<blockquote>
-<p>在本地创建和远程分支对应的分支，git checkout -b <!-- raw HTML omitted --> origin/<!-- raw HTML omitted -->。</p>
-</blockquote>
+<p>在本地创建和远程分支对应的分支，git checkout -b &lt;branchorigin/<!-- raw HTML omitted -->。</p>
 <ul>
 <li>branch</li>
 </ul>
-<blockquote>
 <p>列出所有分支，当前所在分支前有 * 号。git branch。
 删除分支，git branch -d <!-- raw HTML omitted -->。</p>
-</blockquote>
-<blockquote>
 <p>建立本地分支和远程分支的关联，git branch &ndash;set-upstream <!-- raw HTML omitted -->。</p>
-</blockquote>
 <ul>
 <li>
 <p>switch (最新版本添加的命令)</p>
@@ -200,76 +158,44 @@ Git跟踪的是修改，而不是文件</p>
 <p>merge</p>
 </li>
 </ul>
-<blockquote>
 <p>将<!-- raw HTML omitted -->分支的内容合并到当前分支上，git merge <!-- raw HTML omitted -->。</p>
-</blockquote>
-<blockquote>
 <p>禁用Fast forward合并，git merge &ndash;no-ff -m &ldquo;对此次合并的注释&rdquo;。(此次合并会创建一个新的commit)</p>
-</blockquote>
 <ul>
 <li>rm</li>
 </ul>
-<blockquote>
 <p>从版本库中删除文件，git rm <!-- raw HTML omitted -->。(删除版本库文件前需要删除工作区的文件)</p>
-</blockquote>
 <ul>
 <li>remote</li>
 </ul>
-<blockquote>
 <p>关联一个远程库，git remote add origin &lt;ssh地址/http地址&gt;</p>
-</blockquote>
-<blockquote>
 <p>查看远程库的信息，git remote。</p>
-</blockquote>
-<blockquote>
 <p>查看远程库的详细信息， git remote -v。</p>
-</blockquote>
 <ul>
 <li>push</li>
 </ul>
-<blockquote>
 <p>当前分支master推送到远程，git push origin master。
 加上 -u 参数，还会把远程master与本地master关联起来，下次推送或拉取时就可以简化命令，git push -u orgin master。</p>
-</blockquote>
 <ul>
 <li>pull</li>
 </ul>
-<blockquote>
 <p>拉取远程库的分支内容与本地的分支内容合并。</p>
-</blockquote>
-<blockquote>
 <p>如果你想将本地仓库提交到其他地址，则执行git pull &lt;地址&gt;</p>
-</blockquote>
 <ul>
 <li>config</li>
 </ul>
-<blockquote>
 <p>关于git配置文件的命令</p>
-</blockquote>
-<blockquote>
 <p>查看配置信息，命令git config &ndash;list</p>
-</blockquote>
 <ul>
 <li>stash</li>
 </ul>
-<blockquote>
 <p>把当前工作现场“储存”起来，储存到当前分支上。git stash。</p>
-</blockquote>
-<blockquote>
 <p>查看当前分支的存储的“stash”，git stash list。</p>
-</blockquote>
-<blockquote>
 <p>恢复“工作现场”，git stash apply。这个恢复不会把储存的“stash”删除，git stash drop，后就能删除。</p>
-</blockquote>
-<blockquote>
 <p>git stash pop。这个命令能恢复“工作现场”，同时删除“stash”删除。</p>
-</blockquote>
 <ul>
 <li>cherry-pick</li>
 </ul>
-<blockquote>
 <p>指定一个提交合并到当前分支，git cherry-pick &lt;哈希值&gt;。</p>
-</blockquote>
 <h1 id="本地git首次使用需要设置的配置">本地Git首次使用需要设置的配置</h1>
 <h2 id="设置usernameuseremail">设置user.name、user.email</h2>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -303,9 +229,7 @@ git config --global user.email youremail@.com
 <p>没有冲突或者解决掉冲突后，再用git push origin <!-- raw HTML omitted -->推送就能成功！</p>
 </li>
 </ol>
-<blockquote>
-<p>如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch &ndash;set-upstream-to <!-- raw HTML omitted --> origin/<!-- raw HTML omitted -->。</p>
-</blockquote>
+<p>如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch &ndash;set-upstream-to &lt;branchorigin/<!-- raw HTML omitted -->。</p>
 
         </div>
 
